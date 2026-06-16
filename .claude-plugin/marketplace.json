@@ -1,0 +1,25 @@
+{
+  "name": "office-wizards",
+  "owner": {
+    "name": "Office Wizards"
+  },
+  "description": "Office Wizards plugins for Claude Code",
+  "plugins": [
+    {
+      "name": "office-wizards",
+      "source": "./",
+      "description": "Control Microsoft Office desktop apps through Office Wizards product CLIs.",
+      "homepage": "https://github.com/officewizards/officewizards-agent-skills",
+      "repository": "https://github.com/officewizards/officewizards-agent-skills",
+      "license": "MIT",
+      "category": "productivity",
+      "tags": [
+        "office-wizards",
+        "excel",
+        "microsoft-office",
+        "windows",
+        "automation"
+      ]
+    }
+  ]
+}

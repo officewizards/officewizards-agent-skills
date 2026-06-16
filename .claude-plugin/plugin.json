@@ -1,0 +1,18 @@
+{
+  "name": "office-wizards",
+  "description": "Control Microsoft Office desktop apps from Claude Code through Office Wizards product CLIs. Starts with Excel Wizard for Windows desktop Excel automation.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Office Wizards"
+  },
+  "homepage": "https://github.com/officewizards/officewizards-agent-skills",
+  "repository": "https://github.com/officewizards/officewizards-agent-skills",
+  "license": "MIT",
+  "keywords": [
+    "office-wizards",
+    "excel",
+    "microsoft-office",
+    "windows",
+    "automation"
+  ]
+}

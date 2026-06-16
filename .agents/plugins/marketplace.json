@@ -1,0 +1,21 @@
+{
+  "name": "office-wizards",
+  "interface": {
+    "displayName": "Office Wizards"
+  },
+  "plugins": [
+    {
+      "name": "office-wizards",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/officewizards/officewizards-agent-skills.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

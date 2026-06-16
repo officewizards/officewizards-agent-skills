@@ -1,0 +1,16 @@
+{
+  "name": "office-wizards",
+  "owner": {
+    "name": "Office Wizards"
+  },
+  "metadata": {
+    "description": "Office Wizards plugins for controlling Microsoft Office desktop apps through product CLIs."
+  },
+  "plugins": [
+    {
+      "name": "office-wizards",
+      "source": ".",
+      "description": "Control Microsoft Office desktop apps through Office Wizards product CLIs."
+    }
+  ]
+}
