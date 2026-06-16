@@ -1,6 +1,15 @@
+﻿<!-- Generated from workbook-wizard/skills-src/workbook-wizard/references/cli-reference.md.tmpl. Do not edit directly. -->
 # Workbook Wizard CLI Reference
 
-Always pass `-o json` for structured output when a command returns data.
+Use structured output when a command returns data or when an agent needs to branch on errors.
+
+## Command Prefix
+
+```bash
+npx -y workbook-wizard
+```
+
+Channel: `public`
 
 ## Commands
 
@@ -12,7 +21,7 @@ npx -y workbook-wizard help read-range -o json
 npx -y workbook-wizard read-range --help
 ```
 
-Returns command metadata, options, examples, and whether a command requires Excel or mutates workbook/local state. Help commands do not launch or connect to Excel.
+Returns command metadata, options, examples, safety notes, and whether a command requires Excel or mutates workbook/local state. Help commands do not launch or connect to Excel.
 
 ### `info`
 
@@ -69,3 +78,4 @@ Reports the active workbook, worksheet, selection address, and selected value/te
 - No macOS Excel support in this plugin.
 - No localhost server is required for the initial design.
 - The private CLI may add more commands without changing the public install repo shape.
+
