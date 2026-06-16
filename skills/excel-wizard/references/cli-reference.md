@@ -1,12 +1,12 @@
-﻿<!-- Generated from workbook-wizard/skills-src/workbook-wizard/references/cli-reference.md.tmpl. Do not edit directly. -->
-# Workbook Wizard CLI Reference
+﻿<!-- Generated from excel-wizard/skills-src/excel-wizard/references/cli-reference.md.tmpl. Do not edit directly. -->
+# Excel Wizard CLI Reference
 
 Use structured output when a command returns data or when an agent needs to branch on errors.
 
 ## Command Prefix
 
 ```bash
-npx -y workbook-wizard
+npx -y excel-wizard
 ```
 
 Channel: `public`
@@ -16,9 +16,9 @@ Channel: `public`
 ### `help`
 
 ```bash
-npx -y workbook-wizard help -o json
-npx -y workbook-wizard help read-range -o json
-npx -y workbook-wizard read-range --help
+npx -y excel-wizard help -o json
+npx -y excel-wizard help read-range -o json
+npx -y excel-wizard read-range --help
 ```
 
 Returns command metadata, options, examples, safety notes, and whether a command requires Excel or mutates workbook/local state. Help commands do not launch or connect to Excel.
@@ -26,7 +26,7 @@ Returns command metadata, options, examples, safety notes, and whether a command
 ### `info`
 
 ```bash
-npx -y workbook-wizard info -o json
+npx -y excel-wizard info -o json
 ```
 
 Reports CLI version, platform, local authentication mode, and whether Excel COM is registered.
@@ -34,7 +34,7 @@ Reports CLI version, platform, local authentication mode, and whether Excel COM 
 ### `login`
 
 ```bash
-npx -y workbook-wizard login
+npx -y excel-wizard login
 ```
 
 Initial desktop-only authentication is local. This command exists to preserve a stable MagicPath-style flow and can become a browser login later if hosted features are added.
@@ -42,7 +42,7 @@ Initial desktop-only authentication is local. This command exists to preserve a 
 ### `whoami`
 
 ```bash
-npx -y workbook-wizard whoami -o json
+npx -y excel-wizard whoami -o json
 ```
 
 Reports the current local Windows user and machine identity visible to the CLI.
@@ -50,7 +50,7 @@ Reports the current local Windows user and machine identity visible to the CLI.
 ### `check-install`
 
 ```bash
-npx -y workbook-wizard check-install -o json
+npx -y excel-wizard check-install -o json
 ```
 
 Checks whether Microsoft Excel desktop COM is registered and whether the CLI can create an Excel automation object.
@@ -58,7 +58,7 @@ Checks whether Microsoft Excel desktop COM is registered and whether the CLI can
 ### `workbooks`
 
 ```bash
-npx -y workbook-wizard workbooks -o json
+npx -y excel-wizard workbooks -o json
 ```
 
 Lists open workbooks with names, paths, save state, and read-only state.
@@ -66,7 +66,7 @@ Lists open workbooks with names, paths, save state, and read-only state.
 ### `current-selection`
 
 ```bash
-npx -y workbook-wizard current-selection -o json
+npx -y excel-wizard current-selection -o json
 ```
 
 Reports the active workbook, worksheet, selection address, and selected value/text when available.
@@ -78,4 +78,5 @@ Reports the active workbook, worksheet, selection address, and selected value/te
 - No macOS Excel support in this plugin.
 - No localhost server is required for the initial design.
 - The private CLI may add more commands without changing the public install repo shape.
+
 
