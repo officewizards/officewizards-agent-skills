@@ -24,7 +24,7 @@
   "interface": {
     "displayName": "Office Wizards",
     "shortDescription": "Control Office desktop apps through product CLIs",
-    "longDescription": "Office Wizards gives agents command surfaces for Microsoft Office desktop apps. The first product skill is Excel Wizard, a Windows-only CLI for Microsoft Excel desktop automation.",
+    "longDescription": "Office Wizards gives agents command surfaces for Microsoft Office desktop apps. The first product skill is Workbook Wizard, a Windows-only CLI for Microsoft Excel desktop automation.",
     "developerName": "Office Wizards",
     "category": "Productivity",
     "capabilities": [
@@ -34,12 +34,12 @@
     ],
     "websiteURL": "https://github.com/officewizards/officewizards-agent-skills",
     "defaultPrompt": [
-      "Use Excel Wizard to inspect Excel desktop",
+      "Use Workbook Wizard to inspect Excel desktop",
       "List my open Excel workbooks",
       "Automate this Excel workbook",
       "Use Office Wizards to choose the right desktop Office tool"
     ],
-    "brandColor": "#107C41",
+    "brandColor": "#7C3AED",
     "screenshots": []
   }
 }

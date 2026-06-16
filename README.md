@@ -2,7 +2,7 @@
 
 Agent Skills for Office Wizards, packaged for the open Agent Skills ecosystem and installable with Vercel's `skills` CLI or as a Claude Code, Codex, or Cursor plugin.
 
-This repo is the host-facing skills and plugin distribution layer. Product implementations are delivered separately through product CLIs such as `excel-wizard`.
+This repo is the host-facing skills and plugin distribution layer. Product implementations are delivered separately through product CLIs such as `workbook-wizard`.
 
 ## Install in Cursor
 
@@ -48,22 +48,22 @@ npx skills add https://github.com/officewizards/officewizards-agent-skills --lis
 
 Route Microsoft Office desktop automation requests to the right Office Wizards product skill.
 
-### `excel-wizard`
+### `workbook-wizard`
 
-Inspect and automate Microsoft Excel desktop for Windows with the `excel-wizard` CLI.
+Inspect and automate Microsoft Excel desktop for Windows with the `workbook-wizard` CLI.
 
-Use this when a user mentions Excel Wizard, Microsoft Excel desktop, open workbooks, active selections, ranges, formulas, charts, PivotTables, macros, or local Windows Excel automation.
+Use this when a user mentions Workbook Wizard, Microsoft Excel desktop, open workbooks, active selections, ranges, formulas, charts, PivotTables, macros, or local Windows Excel automation.
 
 This public repository is the canonical agent-facing source of truth. The Excel CLI package supplies the local Windows implementation behind:
 
 ```bash
-npx -y excel-wizard <command> -o json
+npx -y workbook-wizard <command> -o json
 ```
 
 ## Planned Product Skills
 
-- `word-wizard`
-- `powerpoint-wizard`
-- `outlook-wizard`
+- `doc-wizard`
+- `deck-wizard`
+- `inbox-wizard`
 
 These will be added as sibling skills when the corresponding product CLIs exist.

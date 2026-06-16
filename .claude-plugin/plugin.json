@@ -1,6 +1,6 @@
 {
   "name": "office-wizards",
-  "description": "Control Microsoft Office desktop apps from Claude Code through Office Wizards product CLIs. Starts with Excel Wizard for Windows desktop Excel automation.",
+  "description": "Control Microsoft Office desktop apps from Claude Code through Office Wizards product CLIs. Starts with Workbook Wizard for Windows desktop Excel automation.",
   "version": "0.1.0",
   "author": {
     "name": "Office Wizards"

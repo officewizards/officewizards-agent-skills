@@ -2,7 +2,7 @@
   "name": "office-wizards",
   "displayName": "Office Wizards",
   "version": "0.1.0",
-  "description": "Control Microsoft Office desktop apps from Cursor through Office Wizards product CLIs. Starts with Excel Wizard for Windows desktop Excel automation.",
+  "description": "Control Microsoft Office desktop apps from Cursor through Office Wizards product CLIs. Starts with Workbook Wizard for Windows desktop Excel automation.",
   "author": {
     "name": "Office Wizards"
   },
