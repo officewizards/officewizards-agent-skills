@@ -1,5 +1,5 @@
 ---
-name: office-wizards
+name: officewizards
 description: Route Microsoft Office desktop automation requests to the right Office Wizards product skill. Use when a user mentions Office Wizards, Microsoft Office desktop apps, Excel, Word, PowerPoint, Outlook, or local Windows Office automation and the exact product skill should be selected.
 user-invocable: true
 ---

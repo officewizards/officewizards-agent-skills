@@ -44,7 +44,7 @@ npx skills add https://github.com/officewizards/officewizards-agent-skills --lis
 
 ## Available Skills
 
-### `office-wizards`
+### `officewizards`
 
 Route Microsoft Office desktop automation requests to the right Office Wizards product skill.
 
