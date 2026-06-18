@@ -1,6 +1,6 @@
 {
   "name": "office-wizards",
-  "description": "Control Microsoft Office desktop apps from Claude Code through Office Wizards product CLIs. Starts with Workbook Wizard for Windows desktop Excel automation.",
+  "description": "Guide agents through safe local Microsoft Office desktop wizard workflows from Claude Code.",
   "version": "0.1.0",
   "author": {
     "name": "Office Wizards"
@@ -11,6 +11,14 @@
   "keywords": [
     "office-wizards",
     "excel",
+    "powerpoint",
+    "word",
+    "outlook",
+    "onenote",
+    "access",
+    "visio",
+    "project",
+    "publisher",
     "microsoft-office",
     "windows",
     "automation"

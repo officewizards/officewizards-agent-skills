@@ -3,12 +3,12 @@
   "owner": {
     "name": "Office Wizards"
   },
-  "description": "Office Wizards plugins for Claude Code",
+  "description": "Office Wizards plugins for safe local Microsoft Office desktop wizard workflows.",
   "plugins": [
     {
       "name": "office-wizards",
       "source": "./",
-      "description": "Control Microsoft Office desktop apps through Office Wizards product CLIs.",
+      "description": "Guide agents through safe local Microsoft Office desktop wizard workflows.",
       "homepage": "https://github.com/officewizards/officewizards-agent-skills",
       "repository": "https://github.com/officewizards/officewizards-agent-skills",
       "license": "MIT",

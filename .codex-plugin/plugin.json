@@ -1,7 +1,7 @@
 {
   "name": "office-wizards",
   "version": "0.1.0",
-  "description": "Control Microsoft Office desktop apps through Office Wizards product CLIs.",
+  "description": "Guide agents through safe local Microsoft Office desktop wizard workflows.",
   "author": {
     "name": "Office Wizards",
     "url": "https://github.com/officewizards"
@@ -12,19 +12,27 @@
   "keywords": [
     "office-wizards",
     "excel",
+    "powerpoint",
+    "word",
+    "outlook",
+    "onenote",
+    "access",
+    "visio",
+    "project",
+    "publisher",
     "microsoft-office",
     "windows",
     "desktop",
     "automation",
     "spreadsheets",
     "com",
-    "npx"
+    "powershell"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Office Wizards",
-    "shortDescription": "Control Office desktop apps through product CLIs",
-    "longDescription": "Office Wizards gives agents command surfaces for Microsoft Office desktop apps. The first product skill is Workbook Wizard, a Windows-only CLI for Microsoft Excel desktop automation.",
+    "shortDescription": "Safe local Office desktop wizard workflows",
+    "longDescription": "Office Wizards gives agents concise app-specific desktop wizard workflows for automating Microsoft Office apps on Windows with direct PowerShell COM and VBA.",
     "developerName": "Office Wizards",
     "category": "Productivity",
     "capabilities": [
@@ -34,10 +42,11 @@
     ],
     "websiteURL": "https://github.com/officewizards/officewizards-agent-skills",
     "defaultPrompt": [
-      "Use Workbook Wizard to inspect Excel desktop",
-      "List my open Excel workbooks",
-      "Automate this Excel workbook",
-      "Use Office Wizards to choose the right desktop Office tool"
+      "Use Office Wizards to choose the right desktop wizard",
+      "Safely inspect my open Excel workbooks",
+      "Draft an Outlook message without sending it",
+      "Safely edit this Word document",
+      "Safely edit this PowerPoint presentation"
     ],
     "brandColor": "#7C3AED",
     "screenshots": []

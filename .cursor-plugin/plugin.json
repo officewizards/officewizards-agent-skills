@@ -2,7 +2,7 @@
   "name": "office-wizards",
   "displayName": "Office Wizards",
   "version": "0.1.0",
-  "description": "Control Microsoft Office desktop apps from Cursor through Office Wizards product CLIs. Starts with Workbook Wizard for Windows desktop Excel automation.",
+  "description": "Guide agents through safe local Microsoft Office desktop wizard workflows from Cursor.",
   "author": {
     "name": "Office Wizards"
   },
@@ -12,6 +12,14 @@
   "keywords": [
     "office-wizards",
     "excel",
+    "powerpoint",
+    "word",
+    "outlook",
+    "onenote",
+    "access",
+    "visio",
+    "project",
+    "publisher",
     "microsoft-office",
     "windows",
     "desktop",
@@ -21,6 +29,14 @@
   "tags": [
     "office-wizards",
     "excel",
+    "powerpoint",
+    "word",
+    "outlook",
+    "onenote",
+    "access",
+    "visio",
+    "project",
+    "publisher",
     "spreadsheets",
     "windows-desktop",
     "office-automation"

@@ -1,78 +1,83 @@
-# Office Wizards Agent Skills
+# Office Wizards
 
-Agent Skills for Office Wizards, packaged for the open Agent Skills ecosystem and installable with Vercel's `skills` CLI or as a Claude Code, Codex, or Cursor plugin.
+![Office Wizards banner](branding/office-wizards-banner.png)
 
-This repo is the host-facing skills and plugin distribution layer. Product implementations are delivered separately through product CLIs such as `excel-wizard` and `powerpoint-wizard`.
+Office Wizards gives agents app-specific instructions for working with desktop Microsoft 365 files on Windows. Install the plugin, then ask your agent to use the right wizard for Excel, PowerPoint, Word, Outlook, OneNote, Access, Visio, Project, or Publisher.
 
-## Install in Cursor
+## Install
 
-In Cursor, install the plugin from the Cursor marketplace when available, or run the following from inside a Cursor session:
-
-```text
-/add-plugin office-wizards
-```
-
-## Install in Claude Code
-
-In Claude Code, add this repo as a marketplace and install the plugin:
-
-```text
-/plugin marketplace add officewizards/officewizards-agent-skills
-/plugin install office-wizards@office-wizards
-```
-
-## Install in Codex
-
-In Codex (CLI, app, or VS Code extension), add this repo as a marketplace and install the plugin:
+Codex:
 
 ```text
 codex plugin marketplace add officewizards/officewizards-agent-skills
 codex plugin add office-wizards@office-wizards
 ```
 
-## Install via the Agent Skills CLI
+Claude Code:
+
+```text
+/plugin marketplace add officewizards/officewizards-agent-skills
+/plugin install office-wizards@office-wizards
+```
+
+Cursor:
+
+```text
+/add-plugin office-wizards
+```
+
+Agent Skills CLI:
 
 ```bash
 npx skills add https://github.com/officewizards/officewizards-agent-skills
 ```
 
-List available skills without installing:
+List the available skills before installing:
 
 ```bash
 npx skills add https://github.com/officewizards/officewizards-agent-skills --list
 ```
 
-## Available Skills
+## What It Does
 
-### `officewizards`
+Office Wizards helps agents work inside the apps where business documents already live. It gives the agent a clear playbook for each Office desktop app: how to inspect the current file, choose the right action, avoid risky changes, and leave the document in a useful state.
 
-Route Microsoft Office desktop automation requests to the right Office Wizards product skill.
+Use it when you want an agent to:
 
-### `excel-wizard`
+- analyze or clean an Excel workbook;
+- build or revise a PowerPoint deck;
+- draft, edit, or review a Word document;
+- summarize Outlook mail or prepare a draft;
+- organize OneNote pages and sections;
+- create or refine Visio diagrams;
+- work with Access databases, Project plans, or Publisher files.
 
-Inspect and automate Microsoft Excel desktop for Windows with the `excel-wizard` CLI.
+## Included Wizards
 
-Use this when a user mentions Excel Wizard, Microsoft Excel desktop, open workbooks, active selections, ranges, formulas, charts, PivotTables, macros, or local Windows Excel automation.
+- Excel Desktop Wizard
+- PowerPoint Desktop Wizard
+- Word Desktop Wizard
+- Outlook Desktop Wizard
+- OneNote Desktop Wizard
+- Access Desktop Wizard
+- Visio Desktop Wizard
+- Project Desktop Wizard
+- Publisher Desktop Wizard
 
-This public repository is the canonical agent-facing source of truth. The Excel CLI package supplies the local Windows implementation behind:
+## How To Use It
 
-```bash
-npx -y excel-wizard <command> -o json
+After installation, ask your agent for the outcome and name Office Wizards when you want it to route the work:
+
+```text
+Use Office Wizards to analyze this Excel workbook.
 ```
 
-### `powerpoint-wizard`
-
-Inspect and automate Microsoft PowerPoint desktop for Windows with the `powerpoint-wizard` CLI.
-
-Use this when a user mentions PowerPoint Wizard, Microsoft PowerPoint desktop, presentations, slides, shapes, exports, macros, or local Windows PowerPoint automation.
-
-```bash
-npx -y powerpoint-wizard <command> -o json
+```text
+Use Office Wizards to turn these notes into a PowerPoint deck.
 ```
 
-## Planned Product Skills
+```text
+Use Office Wizards to summarize the selected Outlook emails and draft replies.
+```
 
-- `inbox-wizard`
-- `word-wizard`
-
-These will be added as sibling skills when the corresponding product CLIs exist.
+The agent will choose the matching desktop wizard and follow the app-specific workflow.
