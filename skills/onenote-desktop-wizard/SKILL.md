@@ -7,19 +7,16 @@ description: Safely automate Microsoft OneNote desktop on Windows with direct Po
 
 Use direct OneNote COM automation for local notebooks, sections, pages, and page XML. Treat page XML and sync state as the primary risk surfaces.
 
+Before mutating or transmitting data, read and follow the shared [Office automation safety policy](../officewizards/references/office-safety.md).
+
 ## Operating Rules
 
 - Inspect notebooks, sections, and pages before acting. Identify notebook path/name, section ID, page ID, title, last modified time, and sync/storage context when relevant.
 - Prefer explicit notebook/section/page IDs. Avoid active-page fallback for mutations unless the user clearly refers to the active page and you have inspected it first.
 - Run one OneNote automation at a time. Desktop COM calls share one OneNote application instance and can reject overlapping work.
-- Create a backup or export before destructive page edits, page moves/deletes, embedded-file changes, large XML rewrites, or media extraction.
 - Read page XML before writing. Preserve namespace structure and existing content unless the user requested replacement.
 - Save or update only when the user requested persistence or the task clearly requires it.
 - Never close OneNote or notebooks unless the user explicitly asks. Release COM references without closing the user's application.
-
-## High-Power Actions
-
-Pause and make the risk explicit before page XML rewrites, page deletion/move, embedded file extraction/deletion, media extraction, broad notebook searches, sync-sensitive edits, or changes to shared/cloud-synced notebooks.
 
 ## PowerShell Pattern
 

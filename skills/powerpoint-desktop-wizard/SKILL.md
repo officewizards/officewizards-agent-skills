@@ -7,20 +7,17 @@ description: Safely automate Microsoft PowerPoint desktop on Windows with direct
 
 Use direct PowerShell COM or temporary VBA for local Microsoft PowerPoint desktop automation. Keep edits targeted, inspect before mutating, and verify visible presentation state after changes.
 
+Before mutating or transmitting data, read and follow the shared [Office automation safety policy](../officewizards/references/office-safety.md).
+
 ## Operating Rules
 
 - Inspect open presentations before acting. Identify presentation name, full path, saved state, active slide, and selected shape when relevant.
 - Prefer explicit presentation paths or names. Avoid active-presentation fallback for mutations unless the user clearly refers to the active presentation and you have inspected it first.
 - Run one PowerPoint automation at a time. Desktop COM calls share one PowerPoint application instance and can reject overlapping work.
-- Create a backup copy before destructive edits, broad text replacement, slide deletion, layout-wide changes, macro/VBA changes, or export overwrites.
 - Read the affected slide, shape, text, notes, or media object before writing. After writing, inspect it again or export a preview artifact when visual verification matters.
-- Save only when the user requested persistence, when the task clearly requires a saved output, or after confirming that the presentation should be changed in place.
+- Save when the user requested persistence or the task clearly requires a saved output. Do not ask again when the target and requested persistence are clear.
 - Export PDFs or images only when requested or required by the task, and avoid overwriting existing files unless the user asked for that path.
 - Never call `PowerPoint.Application.Quit()` unless the user explicitly asks to close PowerPoint. Release COM references without closing the user's application.
-
-## High-Power Actions
-
-Pause and make the risk explicit before running macros, injecting VBA, broad text replacement, slide deletion, media deletion, theme/master edits, layout-wide shape changes, broad presentation discovery, or edits to protected/shared/cloud-synced presentations.
 
 ## PowerShell Pattern
 

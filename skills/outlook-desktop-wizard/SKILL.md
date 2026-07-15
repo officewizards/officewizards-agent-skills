@@ -5,21 +5,19 @@ description: Safely automate Microsoft Outlook desktop on Windows with direct Po
 
 # Outlook Desktop Wizard
 
-Use direct PowerShell COM or temporary VBA for local Microsoft Outlook desktop automation. Outlook automation touches live communication and calendar data, so use the strictest confirmation and verification posture.
+Use direct PowerShell COM or temporary VBA for local Microsoft Outlook desktop automation. Outlook automation touches live communication and calendar data, so inspect outbound and destructive actions carefully.
+
+Before mutating or transmitting data, read and follow the shared [Office automation safety policy](../officewizards/references/office-safety.md).
 
 ## Operating Rules
 
 - Inspect stores, accounts, folders, and candidate items before acting. Identify item IDs, subjects, dates, recipients, organizer, folder path, unread state, and attachment names when relevant.
 - Prefer explicit folder paths and stable item identifiers. Avoid active-item or selected-item fallback for mutations unless the user clearly refers to that item and you have inspected it first.
 - Run one Outlook automation at a time. Desktop COM calls share one Outlook application/session and can reject overlapping work.
-- Create drafts instead of sending whenever possible. Never send, delete, move, archive, invite, respond, forward, mark read/unread, or change recipients without explicit user intent and pre-action inspection.
+- Create drafts instead of sending whenever possible. Immediately before an outbound action, inspect the recipients, body, attachments, meeting details, and target account.
 - Treat mailbox, calendar, contact, and task data as sensitive. Keep terminal output minimal and avoid dumping message bodies unless needed for the task.
 - Save changes only when the user requested persistence or the task clearly requires it. Prefer draft and review workflows for outbound communication.
 - Never call `Outlook.Application.Quit()` unless the user explicitly asks to close Outlook. Release COM references without closing the user's application.
-
-## High-Power Actions
-
-Pause and make the risk explicit before sending mail, sending invites, deleting/moving/archive operations, bulk folder operations, rule changes, attachment export, contact edits, task completion, calendar recurrence edits, or mailbox-wide searches.
 
 ## PowerShell Pattern
 
@@ -27,4 +25,4 @@ Use STA PowerShell for COM automation. Attach to an existing Outlook instance wh
 
 ## Verification
 
-Finish Outlook work by reporting what changed and how it was verified. For outbound drafts or meetings, report recipients, subject, location/time, and draft state without sending unless the user explicitly requested send.
+Finish Outlook work by reporting what changed and how it was verified. For outbound drafts or meetings, report recipients, subject, location/time, and draft state; send only after the shared policy's action-time confirmation.

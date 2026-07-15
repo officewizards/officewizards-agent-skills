@@ -7,6 +7,8 @@ description: Route Microsoft Office desktop automation requests to the right Off
 
 Office Wizards is a suite of agent-facing desktop wizard skills for Microsoft Office automation on Windows.
 
+All sibling skills must read and follow the shared [Office automation safety policy](references/office-safety.md) before mutating or transmitting data.
+
 Use the narrowest sibling skill that matches the target app:
 
 - Excel desktop, workbooks, worksheets, ranges, formulas, charts, tables, macros, VBA, CSV import, PDF export, or the current Excel selection: use [excel-desktop-wizard](../excel-desktop-wizard/SKILL.md).
@@ -19,6 +21,6 @@ Use the narrowest sibling skill that matches the target app:
 - Project desktop, project plans, tasks, resources, assignments, dependencies, calendars, baselines, views, reports, or exports: use [project-desktop-wizard](../project-desktop-wizard/SKILL.md).
 - Publisher desktop, publications, pages, text frames, pictures, linked assets, layout, print settings, or PDF output: use [publisher-desktop-wizard](../publisher-desktop-wizard/SKILL.md).
 
-Do not duplicate the sibling skill instructions here. Route to the matching skill, then follow that skill's desktop COM safety workflow.
+Do not duplicate the sibling skill instructions here. Route to the matching skill, then follow that skill and the shared safety policy.
 
 Use browser automation, Microsoft Graph, Office.js, or cloud APIs only when the user explicitly asks for those surfaces or desktop Office is not the right target.

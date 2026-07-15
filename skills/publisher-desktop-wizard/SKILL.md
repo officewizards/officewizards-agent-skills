@@ -7,19 +7,16 @@ description: Safely automate Microsoft Publisher desktop on Windows with direct 
 
 Use direct PowerShell COM or temporary VBA for local Microsoft Publisher desktop automation. Treat page layout, linked assets, margins, bleed, and print/export settings as visible production state.
 
+Before mutating or transmitting data, read and follow the shared [Office automation safety policy](../officewizards/references/office-safety.md).
+
 ## Operating Rules
 
 - Inspect open publications before acting. Identify publication name, full path, saved state, active page, selected shapes/text frames, linked assets, and print/export settings when relevant.
 - Prefer explicit publication paths, page numbers, and shape names/IDs. Avoid active-publication fallback for mutations unless the user clearly refers to it and you have inspected it first.
 - Run one Publisher automation at a time. Desktop COM calls share one Publisher application instance and can reject overlapping work.
-- Create a backup copy before destructive edits, page deletion, layout-wide changes, linked asset changes, print settings changes, macro/VBA changes, or export overwrites.
 - Read affected pages, text frames, shapes, pictures, and asset links before writing. Verify afterward by inspecting objects or exporting a preview when layout matters.
 - Save/export only when requested or clearly required, and avoid overwriting existing files unless the user asked for that path.
 - Never call `Publisher.Application.Quit()` unless the user explicitly asks to close Publisher. Release COM references without closing the user's application.
-
-## High-Power Actions
-
-Pause and make the risk explicit before page deletion, broad text replacement, layout-wide edits, linked asset changes, bleed/margin/print settings changes, macro/VBA execution, or edits to shared/cloud-synced publications.
 
 ## PowerShell Pattern
 

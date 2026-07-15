@@ -7,20 +7,17 @@ description: Safely automate Microsoft Excel desktop on Windows with direct Powe
 
 Use direct PowerShell COM or temporary VBA for local Microsoft Excel desktop automation. Keep automation specific to the user's workbook and verify results from Excel.
 
+Before mutating or transmitting data, read and follow the shared [Office automation safety policy](../officewizards/references/office-safety.md).
+
 ## Operating Rules
 
 - Inspect open workbooks before acting. Identify workbook name, full path, saved state, active sheet, and selection when relevant.
 - Prefer explicit workbook paths or names. Avoid active-workbook fallback for mutations unless the user clearly refers to the active workbook and you have inspected it first.
 - Run one Excel automation at a time. Desktop COM calls share one Excel application instance and can reject overlapping work.
-- Create a backup copy before destructive edits, broad replacements, sheet/table/chart deletion, macro/VBA changes, or large formula rewrites.
 - Read the affected range, sheet, or object before writing. After writing, read it back or inspect the output artifact to verify the result.
-- Save only when the user requested persistence, when the task clearly requires a saved output, or after confirming that the workbook should be changed in place.
+- Save when the user requested persistence or the task clearly requires a saved output. Do not ask again when the target and requested persistence are clear.
 - Export files only when requested or required by the task, and avoid overwriting existing files unless the user asked for that path.
 - Never call `Excel.Application.Quit()` unless the user explicitly asks to close Excel. Release COM references without closing the user's application.
-
-## High-Power Actions
-
-Pause and make the risk explicit before running macros, injecting VBA, broad find/replace, sheet deletion, workbook recalculation, external link refresh, query refresh, add-in-dependent operations, broad workbook discovery, or edits to protected/hidden workbook structure.
 
 ## PowerShell Pattern
 

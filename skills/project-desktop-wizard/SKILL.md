@@ -7,19 +7,16 @@ description: Safely automate Microsoft Project desktop on Windows with direct Po
 
 Use direct PowerShell COM or temporary VBA for local Microsoft Project desktop automation. Treat schedule calculations, calendars, baselines, and resource leveling as high-impact project state.
 
+Before mutating or transmitting data, read and follow the shared [Office automation safety policy](../officewizards/references/office-safety.md).
+
 ## Operating Rules
 
 - Inspect open projects before acting. Identify project name, full path, saved state, calculation mode, active view, selected tasks/resources, and baseline state when relevant.
 - Prefer explicit project paths, task IDs, resource IDs, and assignment IDs. Avoid active-project fallback for mutations unless the user clearly refers to it and you have inspected it first.
 - Run one Project automation at a time. Desktop COM calls share one Project application instance and can reject overlapping work.
-- Create a backup copy before task/date/dependency/resource changes, baseline changes, calendar edits, leveling, macro/VBA changes, imports, or broad schedule updates.
 - Read affected tasks, dependencies, resources, assignments, and calendars before writing. Verify afterward with the changed IDs, dates, durations, and dependency/resource summaries.
 - Save/export only when requested or clearly required, and avoid overwriting existing files unless the user asked for that path.
 - Never call `MSProject.Application.Quit()` unless the user explicitly asks to close Project. Release COM references without closing the user's application.
-
-## High-Power Actions
-
-Pause and make the risk explicit before recalculation, baseline changes, date shifts, dependency rewrites, calendar edits, resource leveling, actual work/progress edits, macro/VBA execution, or edits to shared/cloud-synced plans.
 
 ## PowerShell Pattern
 
